@@ -183,9 +183,8 @@ def submit_bite(
     }
 
     for button_name, message in buttons.items():
-        if message:
-            if verbose:
-                print(message)
+        if message and verbose:
+            print(message)
         try:
             button = driver.find_element(By.ID, button_name)
         except NoSuchElementException:
